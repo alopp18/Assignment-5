@@ -27,6 +27,8 @@ head (siscowet)
 
 ```
 
+# Generate exploratory figure of age vs. length by sex relationship 
+
 ``` {r}
 
 plot_1 <- siscowet %>%
@@ -38,7 +40,7 @@ plot (plot_1)
 
 ```
 
-# Using the exploratory figure as framework, generate expository figure
+# Using the exploratory figure as framework, generate expository figure with titles/labels, background removed, and color blindness safe color scale. 
 
 ``` {r}
 
