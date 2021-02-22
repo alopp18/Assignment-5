@@ -1,0 +1,63 @@
+---
+title: "Untitled"
+author: "Andy Oppliger"
+date: "2/21/2021"
+output: html_document
+---
+
+# Assignment 5 - Creating an expository figure
+
+# Load packages
+
+```{r}
+
+library(tidyverse)
+library(ggplot2)
+
+```
+
+# Upload and explore data 
+
+```{r}
+# Read in the provided data following a local upload 
+
+# view the data
+
+head (siscowet)
+
+```
+
+``` {r}
+
+plot_1 <- siscowet %>%
+  ggplot (aes(x = age, y = len,
+              color = sex)) +
+  geom_point()
+
+plot (plot_1)
+
+```
+
+# Using the exploratory figure as framework, generate expository figure
+
+``` {r}
+
+plot_2 <- siscowet %>%
+  ggplot (aes(x = age, y = len,
+              color = sex)) +
+  geom_point() +
+  xlab ("Age (years)") +
+  ylab ("Length \n (mm)") +
+  labs (color = "Fish Sex",
+        title = "Siscowet Lake Trout Length vs. Age") +
+  theme_minimal () +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5,size=14),
+              axis.text = element_text(size=12)) +
+  scale_color_viridis_d()
+
+
+plot (plot_2)
+
+
+```
+
